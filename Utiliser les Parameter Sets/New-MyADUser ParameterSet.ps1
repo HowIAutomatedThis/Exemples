@@ -14,7 +14,7 @@ function New-MyADUser {
         "ByUserName" {
             $PSCmdlet.ParameterSetName
             foreach ($User in $UserName) {
-                New-ADUser -name $User -GivenName ($User.Split(".")[0]) -Surname ($User.Split(".")[1]) -Server srv-ad101 -Credential $CredAdmin
+                New-ADUser -name $User -GivenName ($User.Split(".")[0]) -Surname ($User.Split(".")[1])
             }
          }
         "ByFileName" {

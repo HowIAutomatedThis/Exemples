@@ -7,7 +7,7 @@ function New-MyADUser {
     $UserName = Import-Csv -Path $FileName
 
     foreach ($User in $UserName) {
-        New-ADUser -name $User.UserName -GivenName ($User.UserName.Split(".")[0]) -Surname ($User.UserName.Split(".")[1]) -Server srv-ad101 -Credential $CredAdmin
+        New-ADUser -name $User.UserName -GivenName ($User.UserName.Split(".")[0]) -Surname ($User.UserName.Split(".")[1])
     }
 
 }
